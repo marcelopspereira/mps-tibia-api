@@ -5,6 +5,9 @@ module.exports = () => {
   //criar uma variavel recebendo uma instância do express
   const app = express();
 
+  //Import do graphqlHTTP que cria um servidor preparado pro GraphQL + HTTP
+  const graphqlHTTP = require("express-graphql");
+
   //Resolvendo questoes de cross-domain
   app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
@@ -15,7 +18,13 @@ module.exports = () => {
     next();
   });
 
-  app.get("/", (req, res) => res.json({ test: "success" }));
+  app.get(
+    "/player",
+    graphqlHTTP({
+      schema,
+      graphiql: true
+    })
+  );
 
   //retorna a instância do express
   return app;
