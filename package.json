@@ -1,0 +1,20 @@
+{
+  "name": "mps-tibia-api",
+  "version": "1.0.0",
+  "description": "desenvolvimento de um game online rpg tibia",
+  "main": "src/index.js",
+  "author": "Marcelo PS",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.11",
+    "graphql": "^0.13.1",
+    "jsdom": "^11.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.15.0"
+  }
+}
