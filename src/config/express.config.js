@@ -1,5 +1,5 @@
 const express = require("express");
-
+const characterSchema = require('../schema/Character')
 //exporta uma função
 module.exports = () => {
   //criar uma variavel recebendo uma instância do express
